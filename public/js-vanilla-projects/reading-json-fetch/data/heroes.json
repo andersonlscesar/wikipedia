@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Spider Man",
+        "description": "Spider-Man seeks the help of Doctor Strange to forget his exposed secret identity as Peter Parker. However, Strange's spell goes horribly wrong, leading to unwanted guests entering their universe",
+        "img": "assets/img/spider.jpg"
+    },
+
+    {
+        "name": "Iron Man",
+        "description": "When Tony Stark, an industrialist, is captured, he constructs a high-tech armoured suit to escape. Once he manages to escape, he decides to use his suit to fight against evil forces to save the world.",
+        "img": "assets/img/ironman.jpg"
+
+    },
+
+    {
+        "name": "Hulk",
+        "description": "The Hulk might be the most volatile hero in the Marvel Universe and sometimes he's been its most notable hero while being its biggest threat.",
+        "img": "assets/img/hulk.jpg"
+    },
+
+    {
+        "name": "Captain America",
+        "description": "Captain America is a superhero appearing in American comic books published by Marvel Comics. Created by cartoonists Joe Simon and Jack Kirby, the character first appeared in Captain America Comics #1 from Timely Comics, a predecessor of Marvel Comics.",
+        "img": "assets/img/capitao.jpg"
+    }
+]

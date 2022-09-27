@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Dirtyboy';
+    src: url('../font/dirtyboy/Dirtyboy-BxYl.ttf');
+}
+
+@font-face {
+    font-family: 'Cramp';
+    src: url('../font/camp/CrampsRegular-OV7od.ttf');
+}
+
+:root {
+    --primary-color: #0d1b2a;
+}
+
+body {
+    font-family: 'Dirtyboy';
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+button {
+    outline: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+
+}
+
+.see-more {
+    padding: .8rem 2.5rem;
+    border-radius: 5px;
+    border: transparent;
+    font-family: 'Cramp';
+    background-color: #4595eb;
+    color: #fff;
+    cursor: pointer;
+    position: relative; 
+    overflow: hidden;
+    z-index: 1;
+    /* transform: perspective(100rem); */
+}
+
+.after::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0a4e97;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform:  scaleX(0) skewY(40deg);
+    transition: all .3s ease-in-out;
+
+}
+
+.after:hover::after {
+    transform:  scaleX(1) skewY(40deg) scale(3);
+    transition: all .3s ease-in-out;
+}
+
+
+.center-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.main-text {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-family: 'Cramp';
+    margin-bottom: 1.5rem;
+
+}
+
+.main-text, .description  {
+    text-align: center;
+}
+
+.information__image {
+    width: calc(30rem + 5vw);
+    border-radius: 15px;
+    transition: all .3s ease;
+    object-fit: cover;
+
+}
+
+.information__image:hover {
+    filter: grayscale(100%);
+    transition: all .3s ease;
+}
+
+.details__para, .details__title {
+    font-family: 'Cramp';
+}
+
+.heroes {
+    padding-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.heroes__information {
+    display: flex;
+    gap: 1rem;
+    background-color: #465C73;
+    padding: 1rem;
+    border-radius: 15px;
+    
+}
+
+.details__button {
+    padding: .8rem 2.5rem;
+    border-radius: 5px;
+    border: transparent;
+    font-family: 'Cramp';
+    background-color: #4595eb;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.information__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.information__details .details__button {
+    align-self: flex-start;
+}
+
+
+/*
+===============================================
+LOADING
+===============================================
+*/
+.loading {
+    list-style: none;
+    text-align: center;
+    display: none;
+}
+.loading li {
+    display: inline-block;
+    font-size: 2.2rem;
+}
+
+.loading li:nth-child(1) {
+    animation: loading .3s alternate infinite;    
+    color: #a51934;
+}
+
+.loading li:nth-child(2) {
+    animation: loading .3s alternate infinite;
+    animation-delay: .2s;
+    color: #505a3e;
+}
+
+.loading li:nth-child(3) {
+    animation: loading .3s alternate infinite;
+    animation-delay: .4s;
+    color: #1e3f6f;
+}
+
+.loading li:nth-child(4) {
+    animation: loading .3s alternate infinite;
+    animation-delay: .5s;
+    color: #9b6892;
+}
+
+.loading li:nth-child(5) {
+    animation: loading .3s alternate infinite;
+    animation-delay: .7s;
+    color: #695e4d;
+}
+
+.loading li:nth-child(6) {
+    animation: loading .3s alternate infinite;
+    animation-delay: .9s;
+    color: #9c3d2c;
+}
+
+.loading li:nth-child(7) {
+    animation: loading .3s alternate infinite;
+    animation-delay: 1s;
+    color: #4a606c;
+}
+
+@keyframes loading {
+    from {
+        transform: translate(20%);
+        color: #fff;
+    }
+
+    to {
+        transform: translate(0%);
+    }
+}
+
+/*
+===============================================
+MEDIA QUERIES
+===============================================
+*/
+
+@media only screen and (max-width: 900px) {
+    .information__image {
+        width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .heroes__information {
+        flex-wrap: wrap;
+    }
+
+    .information__image {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .main-text {
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 360px ) {
+    .details__title {
+        font-size: 1.2rem;
+    }
+
+    .details__para {
+        font-size: .8rem;
+    }
+}

@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #002A49;
+    --secondary-color: #003049;
+    --button-color: #2A5268;
+    --color-text: #AEDBF3;
+    --input-color: #51798F;
+    --color-button-information:  #04fcdb;
+    --color-text-button-information: #438077;
+}
+
+#body {
+    background-image: linear-gradient(to bottom, rgba(0, 42, 73) , rgba(0, 48, 73, .83) );
+    height: 100vh;
+    font-family: 'Barlow', sans-serif;    
+    color: var(--color-text);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+}
+
+.main-text {
+    font-size: 1.2rem;
+}
+
+.search input {
+    padding: .6rem;
+    font-size: 1rem;
+    border-radius: 30px 0px 0px 30px;
+    border: transparent;
+    background-color: var(--input-color);
+    color: var(--color-text);
+    outline: none;
+    font-family: 'Barlow', sans-serif;  
+    width: 100%;
+
+}
+
+input::placeholder {
+    color: var(--color-text);
+}
+
+.search .search__button {
+    background-image: url('../img/lupa.png');
+    padding: 1.2rem 1.4rem;
+    border: transparent;
+    background-color: var(--button-color);
+    border-radius: 0px 30px 30px 0px;
+    background-size: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.results {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.results__information {
+    background-color: var(--button-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.information__button {
+    align-self: flex-start;
+    padding: .5rem 2rem;
+    border-radius: 3rem;
+    border: transparent;
+    background-color: var(--color-button-information);
+    color: var(--color-text-button-information);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.loading {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: solid 2px var(--color-button-information);
+    border-radius: 50%;
+    animation: loading .3s forwards infinite;
+    pointer-events: none;
+    opacity: 0;
+}
+
+@keyframes loading {
+    to {
+        transform:  translate(-50%, -50%) rotate(1turn);
+    }
+}
+
+.loading--active {
+    opacity: 1;
+}
+
